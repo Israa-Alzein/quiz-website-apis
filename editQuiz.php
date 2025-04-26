@@ -11,7 +11,7 @@ if (!isset($_GET['id'])) {
 
 $quizId = $_GET['id'];
 
-// Check if all required fields are provided
+
 if (!isset($data['title'], $data['description'], $data['url_picture'], $data['genre'])) {
     http_response_code(400); // Bad Request
     echo json_encode(["message" => "Missing fields"]);
