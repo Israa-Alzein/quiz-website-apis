@@ -3,7 +3,7 @@
 try{
     $host = "localhost";
     $port = 3308;  //note: my xampp mysql port is on port 3308 instead of port 3306
-    $dbname = "QuizWeb";
+    $dbname = "QuizWebdb";
     $username = "root";  
     $password = "";
 
