@@ -69,3 +69,8 @@ JOIN
 JOIN 
     Quiz q ON s.Quiz_ID = q.Quiz_ID;
     
+
+INSERT INTO Admin (Admin_ID, Email, Username, Password)
+VALUES (1, 'admin@example.com', 'admin', '$2y$10$vLscfKmQcb5yvHwZmFyy5ui4ZU42GyezzboMFqA0UIuM194c//9yO');
+
+    
