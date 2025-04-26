@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "a9a1edc2-6efb-4d05-9b04-26b3517b3e4d",
+		"name": "api quiz app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43076069"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Israa\",\r\n    \"email\":\"Israa@gmail.com\",\r\n    \"password\": \"Israa123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/my_php_projects/quiz-website-api/Register.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"my_php_projects",
+						"quiz-website-api",
+						"Register.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/my_php_projects/quiz-website-api/Login.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"my_php_projects",
+						"quiz-website-api",
+						"Login.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createQuiz",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Algebric Expressions\",\r\n    \"description\": \"Grade 10\",\r\n    \"url_picture\": \"https://example.com/algebra.jpg\",\r\n    \"genre\": \"Algebra\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/my_php_projects/quiz-website-api/createQuiz.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"my_php_projects",
+						"quiz-website-api",
+						"createQuiz.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getQuizzes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/my_php_projects/quiz-website-api/getQuizzes.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"my_php_projects",
+						"quiz-website-api",
+						"getQuizzes.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editQuiz",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Algebric Expressions\",\r\n    \"description\": \"Grade 11\",\r\n    \"url_picture\": \"https://example.com/algebra.jpg\",\r\n    \"genre\": \"Algebra\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/my_php_projects/quiz-website-api/editQuiz.php?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"my_php_projects",
+						"quiz-website-api",
+						"editQuiz.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteQuiz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/my_php_projects/quiz-website-api/deleteQuiz.php?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"my_php_projects",
+						"quiz-website-api",
+						"deleteQuiz.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createQuestion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quiz_id\": 2,\r\n    \"question_statement\": \"x^2 is _ than 2x\",\r\n    \"option_one\": \"greater\",\r\n    \"option_two\": \"less\",\r\n    \"option_three\": \"equal\",\r\n    \"answer\": \"equal\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/my_php_projects/quiz-website-api/createQuestion.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"my_php_projects",
+						"quiz-website-api",
+						"createQuestion.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getQuestionsByQuizID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/my_php_projects/quiz-website-api/get-questions-by-quiz-id.php?quiz_id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"my_php_projects",
+						"quiz-website-api",
+						"get-questions-by-quiz-id.php"
+					],
+					"query": [
+						{
+							"key": "quiz_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editQuestion",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question_statement\": \"x^2 is _ than 4x\",\r\n    \"option_one\": \"greater\",\r\n    \"option_two\": \"less\",\r\n    \"option_three\": \"equal\",\r\n    \"answer\": \"less\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/my_php_projects/quiz-website-api/editQuestion.php?id=7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"my_php_projects",
+						"quiz-website-api",
+						"editQuestion.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dleteQuestion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/my_php_projects/quiz-website-api/deleteQuestion.php?id=7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"my_php_projects",
+						"quiz-website-api",
+						"deleteQuestion.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
